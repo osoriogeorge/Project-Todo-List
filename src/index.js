@@ -1,8 +1,6 @@
 import "./style.css";
-import { format } from "date-fns";
+import { ProjectList } from "./modules/projectList.js";
+import { dom } from "./modules/dom.js";
 
-const fechaActual = new Date();
-const fechaFormateada = format(fechaActual, "yyyy-MM-dd");
-console.log(fechaFormateada);
-
-console.log("Webpack is working!");
+const projectList = new ProjectList();
+dom.render(projectList);
